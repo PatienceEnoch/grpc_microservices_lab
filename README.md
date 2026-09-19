@@ -1,41 +1,30 @@
-# gRPC Microservices Lab (Python)
+# gRPC Microservices Lab
 
-This project demonstrates a minimal gRPC microservice system using Python, Protocol Buffers, and gRPC.
+**Status: early learning exercise / partial prototype**
 
-## Overview
-The lab contains two components:
+I started this repository while learning how gRPC uses Protocol Buffers to define contracts between services.
 
-1. A server implementing a `GreeterService`.
-2. A client that sends a request to the server and prints the response.
+The current repository contains the service contract in:
 
-Both components communicate using gRPC over port 50051.
+~~~text
+proto/greeter.proto
+~~~
 
-## Project Structure
-grpc-microservices-lab/
-    proto/
-        greeter.proto          # Service contract
-    server/
-        app.py                 # gRPC server implementation
-    client/
-        app.py                 # gRPC client implementation
-    greeter_pb2.py             # Generated message classes
-    greeter_pb2_grpc.py        # Generated gRPC classes
-    README.md
+It does **not** currently contain the complete client/server implementation described in my earlier notes, so I am keeping this README accurate to what is actually committed.
 
-## How it Works
-1. The service contract is defined in `proto/greeter.proto`.
-2. Python gRPC tools generate the files:
-   - `greeter_pb2.py`
-   - `greeter_pb2_grpc.py`
-3. The server (`server/app.py`) listens for incoming RPC requests.
-4. The client (`client/app.py`) sends a request and receives a reply from the server.
+## What I practiced
 
-## Running the Server
+- Defining an RPC service with Protocol Buffers
+- Separating an interface contract from an implementation
+- Understanding generated client/server stubs
+- Comparing RPC-style communication with ordinary HTTP APIs
 
-## Running the Client
+## Why I am keeping this repo
 
-## Concepts Practiced
-- Defining service contracts using Protocol Buffers
-- Generating client and server code from `.proto` files
-- Building minimal microservice components
-- Understanding gRPC communication flow
+This is not one of my current portfolio projects. I am keeping it public as a record of an earlier learning step rather than presenting it as a finished microservices system.
+
+My more complete current projects are:
+
+- [Network Flight Recorder](https://github.com/PatienceEnoch/network-flight-recorder)
+- [Mini Internet](https://github.com/PatienceEnoch/mini-internet)
+- [Shipment Tracker](https://github.com/PatienceEnoch/shipment-tracker)
